@@ -70,7 +70,7 @@ public class Magazyn {
 
     private void usunProdukt() {
         System.out.println("Podaj nazwe produktu: ");
-        String nazwa = scanner.nextLine();
+        String nazwa = scanner.next();
         usunProdukt(nazwa);
         System.out.println("Usunieto produkt: " + nazwa);
     }
@@ -84,7 +84,7 @@ public class Magazyn {
 
     private void zwrocProdukt() {
         System.out.println("Podaj nazwe produktu: ");
-        String nazwa = scanner.nextLine();
+        String nazwa = scanner.next();
         Optional<StanMagazynowyProduktu> zwroconyProdukt = zwrocProdukt(nazwa);
         if (zwroconyProdukt.isPresent()) {
             System.out.println(zwroconyProdukt.get());
@@ -104,7 +104,7 @@ public class Magazyn {
 
     private void zwieksz() {
         System.out.println("Podaj nazwe produktu któremu chcesz zwiększyć stan magazynowy");
-        String nazwa = scanner.nextLine();
+        String nazwa = scanner.next();
         System.out.println("Podaj o ile chcesz zwiększyć stan magazynowy");
         int ilosc = scanner.nextInt();
         zwiekszStanMagazynowy(nazwa, ilosc);
